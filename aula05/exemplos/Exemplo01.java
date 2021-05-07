@@ -24,6 +24,7 @@ public class Exemplo01 {
             }
         }
         System.out.println("Final do programa");
+        
         entrada.close();
     }
 }
