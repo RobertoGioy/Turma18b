@@ -1,6 +1,5 @@
 package exercicio04;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class AppConta {
@@ -8,10 +7,8 @@ public class AppConta {
         Scanner input = new Scanner(System.in);
         int opcao, numConta;
         double limite, valor;
-        ArrayList<Conta> contas = new ArrayList<>();
-        ContaCorrente cc = null;
-        ContaPoupanca cp = null;
-        ContaEspecial ce = null;
+        
+        GerenciaContas contas = new GerenciaContas();
 
         do {
             System.out.println("1. Abrir Conta Corrente");
@@ -29,54 +26,38 @@ public class AppConta {
             case 1:
                 System.out.println("Informe o número da conta:");
                 numConta = input.nextInt();
-                cc = new ContaCorrente(numConta);
-                contas.add(cc);
+                contas.criarContaCorrente(numConta);             
                 break;
             case 2:
                 System.out.println("Informe o número da conta:");
                 numConta = input.nextInt();
-                cp = new ContaPoupanca(numConta);
-                contas.add(cp);
+                contas.criarContaPoupanca(numConta);
                 break;
             case 3:
                 System.out.println("Informe o número da conta:");
                 numConta = input.nextInt();
                 System.out.println("Informe o limite:");
                 limite = input.nextDouble();
-                ce = new ContaEspecial(numConta, limite);
-                contas.add(ce);
+                contas.criarContaEspecial(numConta, limite);
                 break;
             case 4:
                 System.out.println("Informe o número da conta:");
                 numConta = input.nextInt();
                 System.out.println("Informe o valor:");
                 valor = input.nextDouble();
-                for (Conta objConta : contas) {
-                    if (objConta.getConta() == numConta) {
-                        System.out.println((objConta.realizarDeposito(valor)) ? "Depósito realizado" : "Falha na operação");
-                    }
-                }
-
+                contas.fazerDeposito(numConta, valor);
                 break;
             case 5:
                 System.out.println("Informe o número da conta:");
                 numConta = input.nextInt();
                 System.out.println("Informe o valor:");
                 valor = input.nextDouble();
-                for (Conta objConta : contas) {
-                    if (objConta.getConta() == numConta) {
-                        System.out.println((objConta.realizarSaque(valor)) ? "Saque realizado" : "Falha na operação");
-                    }
-                }
+                contas.fazerSaque(numConta, valor);
                 break;
             case 6:
                 System.out.println("Informe o número da conta:");
                 numConta = input.nextInt();
-                for (Conta objConta : contas) {
-                    if (objConta.getConta() == numConta) {
-                        System.out.println(objConta);
-                    }
-                }
+                contas.exibirSaldo(numConta);
                 break;
             default:
                 break;
