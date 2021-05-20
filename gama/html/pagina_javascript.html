@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gama Academy - Javascript</title>
+    <script type="text/javascript" src="../js/funcao.js"></script>
+
+    <script>
+        function validar () {
+            var nome = contatos.nome_cliente.value
+            var email = contatos.email_cliente.value
+            //alert(nome+ " - " + email)
+            if (nome == "") {
+                contatos.nome_cliente.focus();
+                return false;
+            }
+
+            if ((email == "") || (email.indexof('@') == -1)) {
+                contatos.email_cliente.focus();
+                return false;
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <h3>Bem Vindos à Gama Academy</h3>
+    <p>Mais informações</p>
+    <input type="button" onclick="mensagem()" value="Informação">
+    <br><br>
+
+    <h3>Preencha o formulário abaixo</h3>
+    <form id="contatos" action="" method="POST">
+        Nome: <input type="text" name="nome_cliente">
+        <br><br>
+        Email: <input type="text" name="email_cliente">
+        <br><br>
+        <input type="submit" onclick="return validar()" value="Enviar">
+    </form>
+</body>
+</html>
