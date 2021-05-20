@@ -4,7 +4,7 @@ import br.techinsiders.dashcards.model.Agente;
 
 public class AgenteDTO {
     private String nome;
-    private float volumeTransacional;
+    private double volumeTransacional;
 
     public AgenteDTO(Agente agente) {
         this.nome = agente.getNome();
@@ -19,11 +19,11 @@ public class AgenteDTO {
         this.nome = nome;
     }
 
-    public float getVolumeTransacional() {
+    public double getVolumeTransacional() {
         return volumeTransacional;
     }
 
-    public void setVolumeTransacional(float volumeTransacional) {
+    public void setVolumeTransacional(double volumeTransacional) {
         this.volumeTransacional = volumeTransacional;
     }
 

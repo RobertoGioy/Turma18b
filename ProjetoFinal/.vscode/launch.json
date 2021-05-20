@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-DashcardsApplication<dashcards>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "br.techinsiders.dashcards.DashcardsApplication",
+            "projectName": "dashcards",
+            "args": ""
+        }
+    ]
+}

@@ -20,7 +20,7 @@ public class Agente {
     private String nome;
 
     @Column(name = "volume_transacional")
-    private float volume;
+    private double volume;
 
     public int getId() {
         return id;
@@ -38,11 +38,11 @@ public class Agente {
         this.nome = nome;
     }
 
-    public float getVolume() {
+    public double getVolume() {
         return volume;
     }
 
-    public void setVolume(float volume) {
+    public void setVolume(double volume) {
         this.volume = volume;
     }
 }

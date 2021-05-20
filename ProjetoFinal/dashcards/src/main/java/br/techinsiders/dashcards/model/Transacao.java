@@ -25,10 +25,10 @@ public class Transacao {
     private int dispositivo;
 
     @Column(name = "valor_solic ")
-    private float valorSolicitado;
+    private double valorSolicitado;
 
     @Column(name = "valor_aut ")
-    private float valorAut;
+    private double valorAut;
 
     @Column(name = "status")
     private int status;
@@ -61,19 +61,19 @@ public class Transacao {
         this.dispositivo = dispositivo;
     }
 
-    public float getValorSolicitado() {
+    public double getValorSolicitado() {
         return valorSolicitado;
     }
 
-    public void setValorSolicitado(float valorSolicitado) {
+    public void setValorSolicitado(double valorSolicitado) {
         this.valorSolicitado = valorSolicitado;
     }
 
-    public float getValorAut() {
+    public double getValorAut() {
         return valorAut;
     }
 
-    public void setValorAut(float valorAut) {
+    public void setValorAut(double valorAut) {
         this.valorAut = valorAut;
     }
 
