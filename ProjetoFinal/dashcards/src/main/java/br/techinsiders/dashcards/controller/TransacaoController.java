@@ -14,7 +14,7 @@ import br.techinsiders.dashcards.repo.TransacaoRepo;
 @CrossOrigin("*")
 @RequestMapping("/transacao")
 public class TransacaoController {
-    
+     
     @Autowired
     private TransacaoRepo transRepo;
 
